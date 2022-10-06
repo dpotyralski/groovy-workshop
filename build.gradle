@@ -24,3 +24,10 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+compileGroovy {
+    configure(groovyOptions) {
+        configurationScript = file("$rootDir/config/groovy/compiler-config.groovy")
+
+    }
+}
