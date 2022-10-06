@@ -44,6 +44,35 @@ class _14_XMLSupportTest extends Specification {
         node.technology.name.text() == 'Groovy'
     }
 
+    def "should read more values using XmlParser"() {
+        given:
+        XmlParser xmlParser = new XmlParser()
+
+        when:
+        Node response = xmlParser.parseText(BOOKS_XML)
+
+        then:
+        response.attribute("version-api") == '2.0'
+        response.value.books.book[3].name() == 'book'
+        response.value.books.book[3].@available == '5'
+        response.value.books.book[3].title.text() == 'Don Quixote'
+    }
+
+    def "should use `**` and search everywhere from this given point with XmlParser"() {
+        given:
+        XmlParser xmlParser = new XmlParser()
+
+        when:
+        Node response = xmlParser.parseText(BOOKS_XML)
+
+        then:
+        def collect = response.'**'
+                .findAll { node -> node.name() == 'title' }
+                .collect { node -> node.text() }
+
+        collect.size() == 4
+    }
+
     def "should go deeper with GPath usage"() {
         when:
         GPathResult response = xmlSlurper.parseText(BOOKS_XML)
@@ -65,7 +94,7 @@ class _14_XMLSupportTest extends Specification {
                 .title.text() == 'Catcher in the Rye'
     }
 
-    def "should search given book on entire scope - everywhere"() {
+    def "should use `**` and search everywhere using xmlSlurper"() {
         when:
         GPathResult response = xmlSlurper.parseText(BOOKS_XML)
 
