@@ -33,11 +33,12 @@ class _4_MethodReturnValues {
         false
     }
 
-    Person superTrickyReturn() {
-        if (3 > 1) {
-            true
-        }
-        false
-    }
+//TypeCheck applied globally
+//    Person superTrickyReturn() {
+//        if (3 > 1) {
+//            true
+//        }
+//        false
+//    }
 
 }

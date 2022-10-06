@@ -1,7 +1,7 @@
 class _9_StringInterpolation {
 
     String sayHello(String name) {
-        "Hello and welcome ${name.toLowerCase()}"
+        "Hello and welcome ${name}"
     }
 
     String doSomeMath(int value) {

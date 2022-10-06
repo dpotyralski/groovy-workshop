@@ -1,6 +1,6 @@
 class _3_MethodInvocations {
 
-    String callMeWithoutParentheses(String name, int number) {
+    String "Method as String"(String name, int number) {
         "Hello " + name + ", your number is " + number
     }
 
@@ -8,7 +8,7 @@ class _3_MethodInvocations {
         "Hello " + args.name + ", your number is " + args.number
     }
 
-    int methodWithDefaultArgument(int value, ratio = 3) {
+    int methodWithDefaultArgument(int value, int ratio = 3) {
         value * ratio
     }
 

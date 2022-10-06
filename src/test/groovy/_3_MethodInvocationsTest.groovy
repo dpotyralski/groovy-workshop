@@ -6,7 +6,7 @@ class _3_MethodInvocationsTest extends Specification {
 
     def "should successfully call method without parentheses"() {
         when:
-        String result = sub.callMeWithoutParentheses "Stranger", 40
+        String result = sub."Method as String" "Stranger", 40
 
         then:
         result == "Hello Stranger, your number is 40"

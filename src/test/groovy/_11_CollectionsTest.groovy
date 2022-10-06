@@ -7,7 +7,7 @@ class _11_CollectionsTest extends Specification {
         List<Integer> integers = [1, 2, 3, 4, 5]
 
         expect:
-        integers instanceof LinkedList
+        integers instanceof ArrayList
         integers.size() == 5
     }
 
@@ -82,7 +82,7 @@ class _11_CollectionsTest extends Specification {
 
     def "should check that element is in collection using `in` operator"() {
         given:
-        List<Serializable> list = [1, 'test', false] as List //different backing type for our lists
+        List<Serializable> list = [1, 'test', false] as LinkedList //different backing type for our lists
 
         expect:
         list instanceof LinkedList
@@ -236,11 +236,18 @@ class _11_CollectionsTest extends Specification {
 
     def "sorting"() {
         given:
-        LinkedHashMap<String, String> map = [red: '#FF0000', green: '#00FF00', blue: '#0000FF']
+        LinkedHashMap<String, String> map = [red: '#FF0000', blue: '#0000FF', green: '#00FF00']
 
         expect:
-        map.sort() == [blue: '#0000FF', green: '#00FF00', red: '#FF0000']
-        map.sort(false)
+        map.sort()*.getKey() == ['blue', 'green', 'red']
+    }
+
+    def "reverse sorting"() {
+        given:
+        LinkedHashMap<String, String> map = [red: '#FF0000', blue: '#0000FF', green: '#00FF00']
+
+        expect:
+        map.sort() { a, b -> b.key <=> a.key }*.getKey() == ['red', 'green', 'blue']
     }
 
     def "should use range as a source of numbers"() {

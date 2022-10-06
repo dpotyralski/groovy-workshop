@@ -29,12 +29,12 @@ class _4_MethodReturnValuesTest extends Specification {
         sub.moreTrickyReturn() == 'false'
     }
 
-    def "should get class cast exception"() {
-        when:
-        sub.superTrickyReturn()
-        then:
-        thrown(ClassCastException)
-    }
+//    def "should get class cast exception"() {
+//        when:
+//        sub.superTrickyReturn()
+//        then:
+//        thrown(ClassCastException)
+//    }
 
     def 'should successfully cast Person to Boolean'() {
         expect:

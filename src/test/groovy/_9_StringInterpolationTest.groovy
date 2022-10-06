@@ -16,7 +16,7 @@ class _9_StringInterpolationTest extends Specification {
 
     def "should say hello with provided name"() {
         expect:
-        new _9_StringInterpolation().sayHello("Groovy!") == "hello and welcome Groovy!"
+        new _9_StringInterpolation().sayHello("Groovy!") == "Hello and welcome Groovy!"
     }
 
     def "should do some math"() {
