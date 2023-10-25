@@ -5,6 +5,10 @@ class _8_PropertiesScope {
     protected String protectedField = "initProtected"
     private String hiddenField = "hiddenOne"
 
+    String getHiddenField() {
+        return "hiddenFieldFromGetter"
+    }
+
     String getField() {
         return field + "1"
     }

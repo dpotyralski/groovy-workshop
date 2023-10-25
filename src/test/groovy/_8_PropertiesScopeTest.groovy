@@ -24,7 +24,8 @@ class _8_PropertiesScopeTest extends Specification {
 
     def "Should access private"() {
         expect:
-        scope.hiddenField == "hiddenOne"
+        scope.hiddenField == "hiddenFieldFromGetter"
+        scope.@hiddenField == "hiddenOne"
     }
 
     def "Should access private from Java"() {
@@ -32,7 +33,8 @@ class _8_PropertiesScopeTest extends Specification {
         JavaClassWithPrivate clazz = new JavaClassWithPrivate()
 
         expect:
-        clazz.hiddenField == "hiddenInit"
+        clazz.hiddenField == "hiddenInitFromGetter"
+        clazz.@hiddenField == "hiddenInit"
     }
 
 }
