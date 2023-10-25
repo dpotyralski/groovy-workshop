@@ -1,15 +1,25 @@
+import groovy.transform.CompileStatic
+
 import groovy.transform.PackageScope
 
 class _2_MethodDefinitions {
 
-    void publicMethod() {}
+    boolean publicMethod() {
+        return true;
+    }
 
-    private void privateMethod() {}
+    private boolean privateMethod() {
+        return true;
+    }
 
-    protected void protectedMethod() {}
+    protected boolean protectedMethod() {
+        return true;
+    }
 
     @PackageScope
-    void packageScopeMethod() {}
+    boolean packageScopeMethod() {
+        return true;
+    }
 
 }
 

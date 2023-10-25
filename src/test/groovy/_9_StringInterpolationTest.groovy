@@ -16,12 +16,12 @@ class _9_StringInterpolationTest extends Specification {
 
     def "should say hello with provided name"() {
         expect:
-        new _9_StringInterpolation().sayHello("Groovy!") == "Hello and welcome Groovy!"
+        new _11_StringInterpolation().sayHello("Groovy!") == "Hello and welcome Groovy!"
     }
 
     def "should do some math"() {
         expect:
-        new _9_StringInterpolation().doSomeMath(2) == "Output: 4."
+        new _11_StringInterpolation().doSomeMath(2) == "Output: 4."
     }
 
     def "should play well with multilines"() { //JEP 368: Text Blocks JDK15 - 2020

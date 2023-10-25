@@ -1,5 +1,9 @@
 class _3_MethodInvocations {
 
+    String sayHelloTo(String name){
+        "Hello " + name
+    }
+
     String "Method as String"(String name, int number) {
         "Hello " + name + ", your number is " + number
     }

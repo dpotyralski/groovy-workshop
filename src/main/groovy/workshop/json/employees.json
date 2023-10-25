@@ -1,0 +1,110 @@
+{
+  "departmentType": "IT",
+  "employees": [
+    {
+      "id": "a7815c6c-7a59-4e1a-8725-5b12d8259f9a",
+      "firstName": "John",
+      "lastName": "Doe",
+      "position": "Software Engineer",
+      "salary": 75000
+    },
+    {
+      "id": "e9f84d8b-6db5-4fa0-aa68-3096be27f295",
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "position": "Product Manager",
+      "salary": 90000
+    },
+    {
+      "id": "5231a347-122e-4183-a34c-d7e3eabc6c62",
+      "firstName": "Bob",
+      "lastName": "Johnson",
+      "position": "Data Scientist",
+      "salary": 80000
+    },
+    {
+      "id": "cd87a592-f6a4-4a94-a5e3-0efcc0cc02b7",
+      "firstName": "Samantha",
+      "lastName": "Brown",
+      "position": "UX Designer",
+      "salary": 70000
+    },
+    {
+      "id": "9d73e685-c4c7-4c94-b6d6-189de1253a1e",
+      "firstName": "David",
+      "lastName": "Clark",
+      "position": "Marketing Specialist",
+      "salary": 65000
+    },
+    {
+      "id": "b45ec3e3-af9e-4dd4-bc9a-2b3d1a7a7948",
+      "firstName": "Maria",
+      "lastName": "Gonzalez",
+      "position": "Software Engineer",
+      "salary": 72000
+    },
+    {
+      "id": "987c1f20-01ec-4ff9-a35b-917b156f1ec3",
+      "firstName": "Michael",
+      "lastName": "Anderson",
+      "position": "Product Manager",
+      "salary": 95000
+    },
+    {
+      "id": "8f19efb2-6220-4e34-9204-83b3c69719d6",
+      "firstName": "Alice",
+      "lastName": "Roberts",
+      "position": "Data Scientist",
+      "salary": 82000
+    },
+    {
+      "id": "6eab57e7-4c58-4c63-b8f3-885845a86a9f",
+      "firstName": "Daniel",
+      "lastName": "Miller",
+      "position": "UX Designer",
+      "salary": 71000
+    },
+    {
+      "id": "3f8d0e0a-2076-4720-ae59-6f2e540b7e2b",
+      "firstName": "Linda",
+      "lastName": "Walker",
+      "position": "Marketing Specialist",
+      "salary": 67000
+    },
+    {
+      "id": "fae913f9-14f5-465a-930e-6f95e1c731c7",
+      "firstName": "Samuel",
+      "lastName": "Davis",
+      "position": "Software Engineer",
+      "salary": 74000
+    },
+    {
+      "id": "51d1a4c8-b9ea-4c94-8d26-d8e1e12e713b",
+      "firstName": "Sarah",
+      "lastName": "Johnson",
+      "position": "Product Manager",
+      "salary": 91000
+    },
+    {
+      "id": "9cfa08b3-6c3b-4c28-a974-6c97289e1bcf",
+      "firstName": "Charlie",
+      "lastName": "Brown",
+      "position": "Data Scientist",
+      "salary": 81000
+    },
+    {
+      "id": "2d3b4e3d-1f53-4648-9a52-1b36cc9461f5",
+      "firstName": "Emily",
+      "lastName": "Williams",
+      "position": "UX Designer",
+      "salary": 72000
+    },
+    {
+      "id": "1a6d9c58-4b61-41a5-8374-421b1d47b6e3",
+      "firstName": "Jack",
+      "lastName": "Martin",
+      "position": "Marketing Specialist",
+      "salary": 68000
+    }
+  ]
+}

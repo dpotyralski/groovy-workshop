@@ -1,33 +1,40 @@
 plugins {
     id 'java'
     id 'groovy'
-    id "io.freefair.lombok" version "6.5.1"
+    id 'io.freefair.lombok' version '6.5.1'
 }
 
 group 'pl.dpotyralski'
-version '1.0-SNAPSHOT'
+version '1.0'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    implementation 'org.apache.groovy:groovy:4.0.5'
-    implementation 'org.apache.groovy:groovy-json:4.0.5'
-    implementation 'org.apache.groovy:groovy-xml:4.0.5'
+    implementation platform('org.apache.groovy:groovy-bom:4.0.15')
+    implementation 'org.apache.groovy:groovy'
+    implementation 'org.apache.groovy:groovy-json'
+    implementation 'org.apache.groovy:groovy-xml'
+    implementation 'org.apache.groovy:groovy-toml'
+    implementation 'org.apache.groovy:groovy-yaml'
+    implementation 'org.apache.groovy:groovy-sql'
 
-    testImplementation 'org.spockframework:spock-core:2.2-groovy-4.0'
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
+
+    testImplementation platform("org.spockframework:spock-bom:2.3-groovy-4.0")
+    testImplementation "org.spockframework:spock-core"
+
+    testImplementation platform("org.junit:junit-bom:5.10.0")
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine'
+    testImplementation 'com.h2database:h2:2.2.224'
 }
 
 test {
     useJUnitPlatform()
 }
 
-compileGroovy {
-    configure(groovyOptions) {
-        configurationScript = file("$rootDir/config/groovy/compiler-config.groovy")
-
-    }
-}
+//compileGroovy {
+//    configure(groovyOptions) {
+//        configurationScript = file("$rootDir/config/groovy/compiler-config.groovy")
+//    }
+//}
