@@ -1,12 +1,10 @@
 package workshop.xml
 
-import spock.lang.Ignore
 import spock.lang.Specification
 
 class BooksWarehouseServiceTest extends Specification {
 
     private final BooksWarehouseService bws = new BooksWarehouseService()
-
 
     def "Should get only in stock books"() {
         given:
@@ -21,7 +19,6 @@ class BooksWarehouseServiceTest extends Specification {
         expected == actual
     }
 
-    @Ignore
     def "Should be able to replace book in the xml"() {
         given:
         List<Book> expected = [new Book(1, "Harry Potter and the Sorcerer's Stone", "J.K. Rowling", "Fantasy"),
