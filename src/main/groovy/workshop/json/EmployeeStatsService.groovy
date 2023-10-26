@@ -7,16 +7,27 @@ class EmployeeStatsService {
     private final JsonSlurper slurper = new JsonSlurper()
 
     Integer calculatePositionBudget(String position) {
-        // todo
-        // parse json file
-        // sum up given position salary
-        return 0
+        def parsedData = slurper.parse(new File("src/main/groovy/workshop/json/employees.json"))
+        EmployeeDepartment employeeDepartment = parsedData as EmployeeDepartment
+
+        List<Integer> collect = employeeDepartment.employees
+                .findAll { it.position == position }
+                .collect { it.salary }
+        return collect.sum()
     }
 
     String getMostUnpaidPosition() {
-        // todo
-        // parse json file
-        // get position with lowest salary
-        return ""
+        def parsedData = slurper.parse(new File("src/main/groovy/workshop/json/employees.json"))
+        EmployeeDepartment employeeDepartment = parsedData as EmployeeDepartment
+
+        def key = employeeDepartment.employees
+                .groupBy { it.position }
+                .collectEntries { role, employees ->
+                    [role, employees.salary.sum()]
+                }
+                .min { it.value }
+                .key
+        return key
+
     }
 }
