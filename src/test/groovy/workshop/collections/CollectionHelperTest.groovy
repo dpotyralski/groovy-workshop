@@ -7,7 +7,6 @@ class CollectionHelperTest extends Specification {
 
     private CollectionHelper collectionHelper = new CollectionHelper()
 
-    @Ignore
     def 'should keep only kiwi'() {
         given:
         List<String> fruits = ["🍊", "🍓", "🍇", "🍉", "🍌", "🍏", "🍅", "🥝", "🥥", "🍑", "🥑"]
@@ -20,7 +19,6 @@ class CollectionHelperTest extends Specification {
         fruit.first() == "🥝"
     }
 
-    @Ignore
     def 'should be exactly as told in method comments'() {
         given:
         List<Integer> numbers = [2, 3, 5, 6, 7, 14, 26]
@@ -32,15 +30,4 @@ class CollectionHelperTest extends Specification {
         actual == 96
     }
 
-    @Ignore
-    def 'should be exactly as told in method comments'() {
-        given:
-        Map<String, Integer> map = []
-
-        when:
-        int actual = collectionHelper.exacly(numbers)
-
-        then:
-        actual == 96
-    }
 }
