@@ -20,7 +20,7 @@ jobs:
           distribution: temurin
 
       - name: Set up Gradle
-        uses: gradle/gradle-build-action@v3.4.1
+        uses: gradle/gradle-build-action@v3.4.2
         with:
           gradle-executable: ./gradlew
           gradle-version: wrapper
