@@ -12,7 +12,7 @@ repositories {
 }
 
 dependencies {
-    implementation platform('org.apache.groovy:groovy-bom:4.0.24')
+    implementation platform('org.apache.groovy:groovy-bom:4.0.25')
     implementation 'org.apache.groovy:groovy'
     implementation 'org.apache.groovy:groovy-json'
     implementation 'org.apache.groovy:groovy-xml'
