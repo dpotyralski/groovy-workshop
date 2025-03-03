@@ -1,7 +1,7 @@
 plugins {
     id 'java'
     id 'groovy'
-    id 'io.freefair.lombok' version '8.12.2'
+    id 'io.freefair.lombok' version '8.12.2.1'
 }
 
 group 'pl.dpotyralski'
